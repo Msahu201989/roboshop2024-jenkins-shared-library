@@ -7,11 +7,6 @@ def call() {
 
         stages {
 
-            stage('Code Quality') {
-                steps {
-                    echo 'Code Quality'
-                }
-            }
 
             stage('Style Checks') {
                 steps {
