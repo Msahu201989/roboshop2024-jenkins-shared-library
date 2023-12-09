@@ -1,41 +1,38 @@
 def call() {
-    pipeline {
-
-        agent any
-
-        stages {
+    node {
 
         common.codeQuality()
 
-            stage('Style Checks') {
-                steps {
-                    echo 'Code Quality'
-                }
-            }
 
-            stage('Unit Tests') {
-                steps {
-                    echo 'Unit tests'
-                }
-            }
 
-            stage('Download Dependencies') {
-                steps {
-                    echo 'Download Dependencies'
-                }
-            }
-
-            stage('Prepare Artifact') {
-                steps {
-                    echo 'Prepare Artifact'
-                }
-            }
-
-            stage('Publish Artifact') {
-                steps {
-                    echo 'Publish Artifact'
-                }
-            }
-        }
-    }
-}
+//            stage('Style Checks') {
+//                steps {
+//                    echo 'Code Quality'
+//                }
+//            }
+//
+//            stage('Unit Tests') {
+//                steps {
+//                    echo 'Unit tests'
+//                }
+//            }
+//
+//            stage('Download Dependencies') {
+//                steps {
+//                    echo 'Download Dependencies'
+//                }
+//            }
+//
+//            stage('Prepare Artifact') {
+//                steps {
+//                    echo 'Prepare Artifact'
+//                }
+//            }
+//
+//            stage('Publish Artifact') {
+//                steps {
+//                    echo 'Publish Artifact'
+//                }
+//            }
+       }
+  }
