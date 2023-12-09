@@ -4,19 +4,20 @@ def call() {
         common.codeQuality()
 
 
+            if ( barnch == "main" || tag ==~ "*") {
+               stage('Style Checks') {
+                 echo 'Code Quality'
+               }
+            }
 
-//            stage('Style Checks') {
-//                steps {
-//                    echo 'Code Quality'
-//                }
-//            }
-//
+
+
 //            stage('Unit Tests') {
 //                steps {
 //                    echo 'Unit tests'
 //                }
 //            }
-//
+
 //            stage('Download Dependencies') {
 //                steps {
 //                    echo 'Download Dependencies'
