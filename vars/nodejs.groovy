@@ -4,30 +4,19 @@ def call() {
       if (! env.TAG_NAME) {
           env.TAG_NAME = ""
       }
-        sh 'env'
+
         common.codeQuality()
-
-
-            if ( BRANCH_NAME == "main" || TAG_NAME ==~ ".*") {
-               stage('Style Checks') {
-                 echo 'Style Checks'
-               }
-            }
+        common.styleChecks()
+        common.artifacts()
 
 
 
-//            stage('Unit Tests') {
-//                steps {
-//                    echo 'Unit tests'
-//                }
-//            }
 
-//            stage('Download Dependencies') {
-//                steps {
-//                    echo 'Download Dependencies'
-//                }
-//            }
-//
+
+
+
+
+////
 //            stage('Prepare Artifact') {
 //                steps {
 //                    echo 'Prepare Artifact'
