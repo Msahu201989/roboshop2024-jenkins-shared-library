@@ -5,6 +5,12 @@ def call() {
 
         stages {
 
+            stage('Compile Code'){
+                steps {
+                    echo 'Compile Code'
+                }
+            }
+
             stage('Code Quality') {
                 steps {
                     echo 'Code Quality'
@@ -13,7 +19,7 @@ def call() {
 
             stage('Style Checks') {
                 steps {
-                    echo 'Code Quality'
+                    echo 'Style Checks'
                 }
             }
 
@@ -23,7 +29,7 @@ def call() {
                 }
             }
 
-            stage('Download Dependencies') {
+            stage('Build Packages') {
                 steps {
                     echo 'Download Dependencies'
                 }

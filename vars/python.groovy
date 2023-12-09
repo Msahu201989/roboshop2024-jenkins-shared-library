@@ -1,7 +1,9 @@
 def call() {
     pipeline {
 
-        agent any
+        agent {
+            node 'Workstation'
+        }
 
         stages {
 
@@ -20,12 +22,6 @@ def call() {
             stage('Unit Tests') {
                 steps {
                     echo 'Unit tests'
-                }
-            }
-
-            stage('Download Dependencies') {
-                steps {
-                    echo 'Download Dependencies'
                 }
             }
 
