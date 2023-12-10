@@ -1,7 +1,8 @@
 def codeQuality() {
     stage('Code Quality') {
-            echo 'Code Quality'
-            sh 'env'
+     sh '''
+        sonar-scanner -Dsonar.host.url=http://172.31.44.139:9000 -Dsonar.login=admin -Dsonar.password=admin123 -Dsonar.projectKey=${COMPONENT}     
+          '''
     }
 }
 
